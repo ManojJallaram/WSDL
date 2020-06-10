@@ -28,7 +28,7 @@
 					<execution>
 						<phase>test</phase>
 						<configuration>
-							<projectFile>calculator-soapui-project.xml</projectFile>
+							<projectFile>WSDL-soapui-project.xml</projectFile>
 							<outputFolder>${project.build.directory}/surefire-reports</outputFolder>
 							<junitReport>true</junitReport>
 							<printReport>false</printReport>

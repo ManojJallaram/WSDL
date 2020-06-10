@@ -1,10 +1,20 @@
-2020-06-08 09:38:34,263 WARN  [SoapUI] Missing folder [C:\Users\ManojKumarJallaram\Desktop\Project\my-app\ext] for external libraries
-2020-06-08 09:38:34,623 INFO  [DefaultSoapUICore] initialized soapui-settings from [C:\Users\ManojKumarJallaram\soapui-settings.xml]
-2020-06-08 09:38:37,312 INFO  [PluginManager] Adding plugin from [C:\Users\ManojKumarJallaram\.soapuios\plugins\ready-mqtt-plugin-dist.jar]
-2020-06-08 09:38:37,312 INFO  [PluginManager] Adding plugin from [C:\Users\ManojKumarJallaram\.soapuios\plugins\soapui-swagger-plugin-2.2-dist.jar]
-2020-06-08 09:38:39,124 WARN  [PluginManager] Could not load plugin from file [C:\Users\ManojKumarJallaram\.soapuios\plugins\ready-mqtt-plugin-dist.jar]
-com.eviware.soapui.plugins.InvalidPluginException: Error loading plugin class com.smartbear.mqttsupport.PluginConfig
-	at com.eviware.soapui.plugins.PluginLoader.loadPlugin(PluginLoader.java:114)
+2020-06-08 11:39:58,053 WARN  [SoapUI] Missing folder [C:\Users\ManojKumarJallaram\Desktop\Project\my-app\ext] for external libraries
+2020-06-08 11:39:58,388 INFO  [DefaultSoapUICore] initialized soapui-settings from [C:\Users\ManojKumarJallaram\soapui-settings.xml]
+2020-06-08 11:40:00,835 INFO  [PluginManager] Adding plugin from [C:\Users\ManojKumarJallaram\.soapuios\plugins\ready-mqtt-plugin-dist.jar]
+2020-06-08 11:40:00,835 INFO  [PluginManager] Adding plugin from [C:\Users\ManojKumarJallaram\.soapuios\plugins\soapui-swagger-plugin-2.2-dist.jar]
+2020-06-08 11:40:02,297 ERROR [SoapUI] An error occurred [com.eviware.soapui.plugins.auto.factories.AutoImportMethodFactory], see error log for details
+2020-06-08 11:40:02,299 ERROR [errorlog] java.lang.ClassNotFoundException: com.eviware.soapui.plugins.auto.factories.AutoImportMethodFactory
+java.lang.ClassNotFoundException: com.eviware.soapui.plugins.auto.factories.AutoImportMethodFactory
+	at org.codehaus.plexus.classworlds.strategy.SelfFirstStrategy.loadClass(SelfFirstStrategy.java:50)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.unsynchronizedLoadClass(ClassRealm.java:271)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(ClassRealm.java:247)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(ClassRealm.java:239)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at com.eviware.soapui.plugins.LoaderBase.loadAutoFactories(LoaderBase.java:113)
+	at com.eviware.soapui.plugins.LoaderBase.loadFactories(LoaderBase.java:80)
+	at com.eviware.soapui.plugins.PluginLoader.loadPluginFactories(PluginLoader.java:141)
+	at com.eviware.soapui.plugins.PluginLoader.loadPlugin(PluginLoader.java:104)
 	at com.eviware.soapui.plugins.PluginLoader.loadPlugin(PluginLoader.java:54)
 	at com.eviware.soapui.plugins.PluginManager.doInstallPlugin(PluginManager.java:141)
 	at com.eviware.soapui.plugins.PluginManager.access$600(PluginManager.java:43)
@@ -12,74 +22,24 @@ com.eviware.soapui.plugins.InvalidPluginException: Error loading plugin class co
 	at com.eviware.soapui.plugins.PluginManager$LoadPluginsTask.compute(PluginManager.java:377)
 	at com.eviware.soapui.plugins.PluginManager$LoadPluginsTask.compute(PluginManager.java:382)
 	at com.eviware.soapui.plugins.PluginManager$LoadPluginsTask.compute(PluginManager.java:365)
-	at java.base/java.util.concurrent.RecursiveTask.exec(RecursiveTask.java:94)
-	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
-	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
-	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
-	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
-	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
-Caused by: org.reflections.ReflectionsException: could not get type for name com.eviware.soapui.plugins.auto.PluginSubReport
-	at org.reflections.ReflectionUtils.forName(ReflectionUtils.java:378)
-	at org.reflections.ReflectionUtils.forNames(ReflectionUtils.java:387)
-	at org.reflections.Reflections.getTypesAnnotatedWith(Reflections.java:351)
-	at com.eviware.soapui.plugins.LoaderBase.loadAutoFactories(LoaderBase.java:108)
+	at java.util.concurrent.RecursiveTask.exec(RecursiveTask.java:94)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+2020-06-08 11:40:02,391 ERROR [SoapUI] An error occurred [com.eviware.soapui.plugins.auto.factories.AutoDiscoveryMethodFactory], see error log for details
+2020-06-08 11:40:02,392 ERROR [errorlog] java.lang.ClassNotFoundException: com.eviware.soapui.plugins.auto.factories.AutoDiscoveryMethodFactory
+java.lang.ClassNotFoundException: com.eviware.soapui.plugins.auto.factories.AutoDiscoveryMethodFactory
+	at org.codehaus.plexus.classworlds.strategy.SelfFirstStrategy.loadClass(SelfFirstStrategy.java:50)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.unsynchronizedLoadClass(ClassRealm.java:271)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(ClassRealm.java:247)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(ClassRealm.java:239)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at com.eviware.soapui.plugins.LoaderBase.loadAutoFactories(LoaderBase.java:113)
 	at com.eviware.soapui.plugins.LoaderBase.loadFactories(LoaderBase.java:80)
 	at com.eviware.soapui.plugins.PluginLoader.loadPluginFactories(PluginLoader.java:141)
 	at com.eviware.soapui.plugins.PluginLoader.loadPlugin(PluginLoader.java:104)
-	... 13 more
-2020-06-08 09:38:39,158 INFO  [PluginManager] Adding plugin from [C:\Users\ManojKumarJallaram\.soapuios\plugins\ready-uxm-plugin-1.0.1-dist.jar]
-2020-06-08 09:38:39,340 WARN  [PluginManager] Could not load plugin from file [C:\Users\ManojKumarJallaram\.soapuios\plugins\soapui-swagger-plugin-2.2-dist.jar]
-com.eviware.soapui.plugins.InvalidPluginException: Error loading plugin class com.smartbear.swagger.PluginConfig
-	at com.eviware.soapui.plugins.PluginLoader.loadPlugin(PluginLoader.java:114)
-	at com.eviware.soapui.plugins.PluginLoader.loadPlugin(PluginLoader.java:54)
-	at com.eviware.soapui.plugins.PluginManager.doInstallPlugin(PluginManager.java:141)
-	at com.eviware.soapui.plugins.PluginManager.access$600(PluginManager.java:43)
-	at com.eviware.soapui.plugins.PluginManager$LoadPluginsTask.computeSequentially(PluginManager.java:420)
-	at com.eviware.soapui.plugins.PluginManager$LoadPluginsTask.compute(PluginManager.java:377)
-	at com.eviware.soapui.plugins.PluginManager$LoadPluginsTask.compute(PluginManager.java:365)
-	at java.base/java.util.concurrent.RecursiveTask.exec(RecursiveTask.java:94)
-	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
-	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
-	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
-	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
-	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
-Caused by: org.reflections.ReflectionsException: could not get type for name com.eviware.soapui.plugins.auto.PluginSubReport
-	at org.reflections.ReflectionUtils.forName(ReflectionUtils.java:378)
-	at org.reflections.ReflectionUtils.forNames(ReflectionUtils.java:387)
-	at org.reflections.Reflections.getTypesAnnotatedWith(Reflections.java:351)
-	at com.eviware.soapui.plugins.LoaderBase.loadAutoFactories(LoaderBase.java:108)
-	at com.eviware.soapui.plugins.LoaderBase.loadFactories(LoaderBase.java:80)
-	at com.eviware.soapui.plugins.PluginLoader.loadPluginFactories(PluginLoader.java:141)
-	at com.eviware.soapui.plugins.PluginLoader.loadPlugin(PluginLoader.java:104)
-	... 12 more
-2020-06-08 09:38:39,373 INFO  [PluginManager] Adding plugin from [C:\Users\ManojKumarJallaram\.soapuios\plugins\readyapi-postman-1.0.1.jar]
-2020-06-08 09:38:40,208 WARN  [PluginManager] Could not load plugin from file [C:\Users\ManojKumarJallaram\.soapuios\plugins\readyapi-postman-1.0.1.jar]
-com.eviware.soapui.plugins.InvalidPluginException: Error loading plugin class com.smartbear.postman.PluginConfig
-	at com.eviware.soapui.plugins.PluginLoader.loadPlugin(PluginLoader.java:114)
-	at com.eviware.soapui.plugins.PluginLoader.loadPlugin(PluginLoader.java:54)
-	at com.eviware.soapui.plugins.PluginManager.doInstallPlugin(PluginManager.java:141)
-	at com.eviware.soapui.plugins.PluginManager.access$600(PluginManager.java:43)
-	at com.eviware.soapui.plugins.PluginManager$LoadPluginsTask.computeSequentially(PluginManager.java:420)
-	at com.eviware.soapui.plugins.PluginManager$LoadPluginsTask.compute(PluginManager.java:377)
-	at com.eviware.soapui.plugins.PluginManager$LoadPluginsTask.compute(PluginManager.java:365)
-	at java.base/java.util.concurrent.RecursiveTask.exec(RecursiveTask.java:94)
-	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
-	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
-	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
-	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
-	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
-Caused by: org.reflections.ReflectionsException: could not get type for name com.eviware.soapui.plugins.auto.PluginSubReport
-	at org.reflections.ReflectionUtils.forName(ReflectionUtils.java:378)
-	at org.reflections.ReflectionUtils.forNames(ReflectionUtils.java:387)
-	at org.reflections.Reflections.getTypesAnnotatedWith(Reflections.java:351)
-	at com.eviware.soapui.plugins.LoaderBase.loadAutoFactories(LoaderBase.java:108)
-	at com.eviware.soapui.plugins.LoaderBase.loadFactories(LoaderBase.java:80)
-	at com.eviware.soapui.plugins.PluginLoader.loadPluginFactories(PluginLoader.java:141)
-	at com.eviware.soapui.plugins.PluginLoader.loadPlugin(PluginLoader.java:104)
-	... 12 more
-2020-06-08 09:38:40,282 WARN  [PluginManager] Could not load plugin from file [C:\Users\ManojKumarJallaram\.soapuios\plugins\ready-uxm-plugin-1.0.1-dist.jar]
-com.eviware.soapui.plugins.InvalidPluginException: Error loading plugin class com.smartbear.ready.PluginConfig
-	at com.eviware.soapui.plugins.PluginLoader.loadPlugin(PluginLoader.java:114)
 	at com.eviware.soapui.plugins.PluginLoader.loadPlugin(PluginLoader.java:54)
 	at com.eviware.soapui.plugins.PluginManager.doInstallPlugin(PluginManager.java:141)
 	at com.eviware.soapui.plugins.PluginManager.access$600(PluginManager.java:43)
@@ -87,25 +47,122 @@ com.eviware.soapui.plugins.InvalidPluginException: Error loading plugin class co
 	at com.eviware.soapui.plugins.PluginManager$LoadPluginsTask.compute(PluginManager.java:377)
 	at com.eviware.soapui.plugins.PluginManager$LoadPluginsTask.compute(PluginManager.java:382)
 	at com.eviware.soapui.plugins.PluginManager$LoadPluginsTask.compute(PluginManager.java:365)
-	at java.base/java.util.concurrent.RecursiveTask.exec(RecursiveTask.java:94)
-	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
-	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
-	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
-	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
-	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
-Caused by: org.reflections.ReflectionsException: could not get type for name com.eviware.soapui.plugins.auto.PluginSubReport
-	at org.reflections.ReflectionUtils.forName(ReflectionUtils.java:378)
-	at org.reflections.ReflectionUtils.forNames(ReflectionUtils.java:387)
-	at org.reflections.Reflections.getTypesAnnotatedWith(Reflections.java:351)
-	at com.eviware.soapui.plugins.LoaderBase.loadAutoFactories(LoaderBase.java:108)
+	at java.util.concurrent.RecursiveTask.exec(RecursiveTask.java:94)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+2020-06-08 11:40:02,487 INFO  [PluginManager] Adding plugin from [C:\Users\ManojKumarJallaram\.soapuios\plugins\ready-uxm-plugin-1.0.1-dist.jar]
+2020-06-08 11:40:02,537 ERROR [SoapUI] An error occurred [com.eviware.soapui.plugins.auto.factories.AutoImportMethodFactory], see error log for details
+2020-06-08 11:40:02,538 ERROR [errorlog] java.lang.ClassNotFoundException: com.eviware.soapui.plugins.auto.factories.AutoImportMethodFactory
+java.lang.ClassNotFoundException: com.eviware.soapui.plugins.auto.factories.AutoImportMethodFactory
+	at org.codehaus.plexus.classworlds.strategy.SelfFirstStrategy.loadClass(SelfFirstStrategy.java:50)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.unsynchronizedLoadClass(ClassRealm.java:271)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(ClassRealm.java:247)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(ClassRealm.java:239)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at com.eviware.soapui.plugins.LoaderBase.loadAutoFactories(LoaderBase.java:113)
 	at com.eviware.soapui.plugins.LoaderBase.loadFactories(LoaderBase.java:80)
 	at com.eviware.soapui.plugins.PluginLoader.loadPluginFactories(PluginLoader.java:141)
 	at com.eviware.soapui.plugins.PluginLoader.loadPlugin(PluginLoader.java:104)
-	... 13 more
-2020-06-08 09:38:40,300 INFO  [PluginManager] Adding plugin from [C:\Users\ManojKumarJallaram\.soapuios\plugins\readyapi-swaggerhub-plugin-1.0.jar]
-2020-06-08 09:38:40,746 WARN  [PluginManager] Could not load plugin from file [C:\Users\ManojKumarJallaram\.soapuios\plugins\readyapi-swaggerhub-plugin-1.0.jar]
-com.eviware.soapui.plugins.InvalidPluginException: Error loading plugin class com.smartbear.plugins.swaggerhub.PluginConfig
-	at com.eviware.soapui.plugins.PluginLoader.loadPlugin(PluginLoader.java:114)
+	at com.eviware.soapui.plugins.PluginLoader.loadPlugin(PluginLoader.java:54)
+	at com.eviware.soapui.plugins.PluginManager.doInstallPlugin(PluginManager.java:141)
+	at com.eviware.soapui.plugins.PluginManager.access$600(PluginManager.java:43)
+	at com.eviware.soapui.plugins.PluginManager$LoadPluginsTask.computeSequentially(PluginManager.java:420)
+	at com.eviware.soapui.plugins.PluginManager$LoadPluginsTask.compute(PluginManager.java:377)
+	at com.eviware.soapui.plugins.PluginManager$LoadPluginsTask.compute(PluginManager.java:365)
+	at java.util.concurrent.RecursiveTask.exec(RecursiveTask.java:94)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+2020-06-08 11:40:02,604 ERROR [SoapUI] An error occurred [com.eviware.soapui.plugins.auto.factories.AutoDiscoveryMethodFactory], see error log for details
+2020-06-08 11:40:02,604 ERROR [errorlog] java.lang.ClassNotFoundException: com.eviware.soapui.plugins.auto.factories.AutoDiscoveryMethodFactory
+java.lang.ClassNotFoundException: com.eviware.soapui.plugins.auto.factories.AutoDiscoveryMethodFactory
+	at org.codehaus.plexus.classworlds.strategy.SelfFirstStrategy.loadClass(SelfFirstStrategy.java:50)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.unsynchronizedLoadClass(ClassRealm.java:271)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(ClassRealm.java:247)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(ClassRealm.java:239)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at com.eviware.soapui.plugins.LoaderBase.loadAutoFactories(LoaderBase.java:113)
+	at com.eviware.soapui.plugins.LoaderBase.loadFactories(LoaderBase.java:80)
+	at com.eviware.soapui.plugins.PluginLoader.loadPluginFactories(PluginLoader.java:141)
+	at com.eviware.soapui.plugins.PluginLoader.loadPlugin(PluginLoader.java:104)
+	at com.eviware.soapui.plugins.PluginLoader.loadPlugin(PluginLoader.java:54)
+	at com.eviware.soapui.plugins.PluginManager.doInstallPlugin(PluginManager.java:141)
+	at com.eviware.soapui.plugins.PluginManager.access$600(PluginManager.java:43)
+	at com.eviware.soapui.plugins.PluginManager$LoadPluginsTask.computeSequentially(PluginManager.java:420)
+	at com.eviware.soapui.plugins.PluginManager$LoadPluginsTask.compute(PluginManager.java:377)
+	at com.eviware.soapui.plugins.PluginManager$LoadPluginsTask.compute(PluginManager.java:365)
+	at java.util.concurrent.RecursiveTask.exec(RecursiveTask.java:94)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+2020-06-08 11:40:02,687 INFO  [PluginManager] Adding plugin from [C:\Users\ManojKumarJallaram\.soapuios\plugins\readyapi-postman-1.0.1.jar]
+2020-06-08 11:40:03,811 ERROR [SoapUI] An error occurred [com.eviware.soapui.plugins.auto.factories.AutoImportMethodFactory], see error log for details
+2020-06-08 11:40:03,812 ERROR [errorlog] java.lang.ClassNotFoundException: com.eviware.soapui.plugins.auto.factories.AutoImportMethodFactory
+java.lang.ClassNotFoundException: com.eviware.soapui.plugins.auto.factories.AutoImportMethodFactory
+	at org.codehaus.plexus.classworlds.strategy.SelfFirstStrategy.loadClass(SelfFirstStrategy.java:50)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.unsynchronizedLoadClass(ClassRealm.java:271)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(ClassRealm.java:247)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(ClassRealm.java:239)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at com.eviware.soapui.plugins.LoaderBase.loadAutoFactories(LoaderBase.java:113)
+	at com.eviware.soapui.plugins.LoaderBase.loadFactories(LoaderBase.java:80)
+	at com.eviware.soapui.plugins.PluginLoader.loadPluginFactories(PluginLoader.java:141)
+	at com.eviware.soapui.plugins.PluginLoader.loadPlugin(PluginLoader.java:104)
+	at com.eviware.soapui.plugins.PluginLoader.loadPlugin(PluginLoader.java:54)
+	at com.eviware.soapui.plugins.PluginManager.doInstallPlugin(PluginManager.java:141)
+	at com.eviware.soapui.plugins.PluginManager.access$600(PluginManager.java:43)
+	at com.eviware.soapui.plugins.PluginManager$LoadPluginsTask.computeSequentially(PluginManager.java:420)
+	at com.eviware.soapui.plugins.PluginManager$LoadPluginsTask.compute(PluginManager.java:377)
+	at com.eviware.soapui.plugins.PluginManager$LoadPluginsTask.compute(PluginManager.java:365)
+	at java.util.concurrent.RecursiveTask.exec(RecursiveTask.java:94)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+2020-06-08 11:40:03,878 ERROR [SoapUI] An error occurred [com.eviware.soapui.plugins.auto.factories.AutoDiscoveryMethodFactory], see error log for details
+2020-06-08 11:40:03,878 ERROR [errorlog] java.lang.ClassNotFoundException: com.eviware.soapui.plugins.auto.factories.AutoDiscoveryMethodFactory
+java.lang.ClassNotFoundException: com.eviware.soapui.plugins.auto.factories.AutoDiscoveryMethodFactory
+	at org.codehaus.plexus.classworlds.strategy.SelfFirstStrategy.loadClass(SelfFirstStrategy.java:50)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.unsynchronizedLoadClass(ClassRealm.java:271)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(ClassRealm.java:247)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(ClassRealm.java:239)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at com.eviware.soapui.plugins.LoaderBase.loadAutoFactories(LoaderBase.java:113)
+	at com.eviware.soapui.plugins.LoaderBase.loadFactories(LoaderBase.java:80)
+	at com.eviware.soapui.plugins.PluginLoader.loadPluginFactories(PluginLoader.java:141)
+	at com.eviware.soapui.plugins.PluginLoader.loadPlugin(PluginLoader.java:104)
+	at com.eviware.soapui.plugins.PluginLoader.loadPlugin(PluginLoader.java:54)
+	at com.eviware.soapui.plugins.PluginManager.doInstallPlugin(PluginManager.java:141)
+	at com.eviware.soapui.plugins.PluginManager.access$600(PluginManager.java:43)
+	at com.eviware.soapui.plugins.PluginManager$LoadPluginsTask.computeSequentially(PluginManager.java:420)
+	at com.eviware.soapui.plugins.PluginManager$LoadPluginsTask.compute(PluginManager.java:377)
+	at com.eviware.soapui.plugins.PluginManager$LoadPluginsTask.compute(PluginManager.java:365)
+	at java.util.concurrent.RecursiveTask.exec(RecursiveTask.java:94)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+2020-06-08 11:40:03,985 ERROR [SoapUI] An error occurred [com.eviware.soapui.plugins.auto.factories.AutoImportMethodFactory], see error log for details
+2020-06-08 11:40:03,985 ERROR [errorlog] java.lang.ClassNotFoundException: com.eviware.soapui.plugins.auto.factories.AutoImportMethodFactory
+java.lang.ClassNotFoundException: com.eviware.soapui.plugins.auto.factories.AutoImportMethodFactory
+	at org.codehaus.plexus.classworlds.strategy.SelfFirstStrategy.loadClass(SelfFirstStrategy.java:50)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.unsynchronizedLoadClass(ClassRealm.java:271)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(ClassRealm.java:247)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(ClassRealm.java:239)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at com.eviware.soapui.plugins.LoaderBase.loadAutoFactories(LoaderBase.java:113)
+	at com.eviware.soapui.plugins.LoaderBase.loadFactories(LoaderBase.java:80)
+	at com.eviware.soapui.plugins.PluginLoader.loadPluginFactories(PluginLoader.java:141)
+	at com.eviware.soapui.plugins.PluginLoader.loadPlugin(PluginLoader.java:104)
 	at com.eviware.soapui.plugins.PluginLoader.loadPlugin(PluginLoader.java:54)
 	at com.eviware.soapui.plugins.PluginManager.doInstallPlugin(PluginManager.java:141)
 	at com.eviware.soapui.plugins.PluginManager.access$600(PluginManager.java:43)
@@ -113,24 +170,92 @@ com.eviware.soapui.plugins.InvalidPluginException: Error loading plugin class co
 	at com.eviware.soapui.plugins.PluginManager$LoadPluginsTask.compute(PluginManager.java:377)
 	at com.eviware.soapui.plugins.PluginManager$LoadPluginsTask.compute(PluginManager.java:382)
 	at com.eviware.soapui.plugins.PluginManager$LoadPluginsTask.compute(PluginManager.java:365)
-	at java.base/java.util.concurrent.RecursiveTask.exec(RecursiveTask.java:94)
-	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
-	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
-	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
-	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
-	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
-Caused by: org.reflections.ReflectionsException: could not get type for name com.eviware.soapui.plugins.auto.PluginSubReport
-	at org.reflections.ReflectionUtils.forName(ReflectionUtils.java:378)
-	at org.reflections.ReflectionUtils.forNames(ReflectionUtils.java:387)
-	at org.reflections.Reflections.getTypesAnnotatedWith(Reflections.java:351)
-	at com.eviware.soapui.plugins.LoaderBase.loadAutoFactories(LoaderBase.java:108)
+	at java.util.concurrent.RecursiveTask.exec(RecursiveTask.java:94)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+2020-06-08 11:40:04,052 ERROR [SoapUI] An error occurred [com.eviware.soapui.plugins.auto.factories.AutoDiscoveryMethodFactory], see error log for details
+2020-06-08 11:40:04,053 ERROR [errorlog] java.lang.ClassNotFoundException: com.eviware.soapui.plugins.auto.factories.AutoDiscoveryMethodFactory
+java.lang.ClassNotFoundException: com.eviware.soapui.plugins.auto.factories.AutoDiscoveryMethodFactory
+	at org.codehaus.plexus.classworlds.strategy.SelfFirstStrategy.loadClass(SelfFirstStrategy.java:50)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.unsynchronizedLoadClass(ClassRealm.java:271)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(ClassRealm.java:247)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(ClassRealm.java:239)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at com.eviware.soapui.plugins.LoaderBase.loadAutoFactories(LoaderBase.java:113)
 	at com.eviware.soapui.plugins.LoaderBase.loadFactories(LoaderBase.java:80)
 	at com.eviware.soapui.plugins.PluginLoader.loadPluginFactories(PluginLoader.java:141)
 	at com.eviware.soapui.plugins.PluginLoader.loadPlugin(PluginLoader.java:104)
-	... 13 more
-2020-06-08 09:38:40,759 INFO  [PluginManager] 5 plugins loaded in 3451 ms
-2020-06-08 09:38:40,760 INFO  [DefaultSoapUICore] All plugins loaded
-2020-06-08 09:38:42,089 WARN  [Tools] Could not delete temporary directory C:\Users\MANOJK~1\AppData\Local\Temp\2063dda9-d9c4-490f-a546-f91de43e483a
-2020-06-08 09:38:42,089 WARN  [Tools] Could not delete temporary directory C:\Users\MANOJK~1\AppData\Local\Temp\a0f1d0ce-dfb5-498a-8a20-e1ca7c6fcb29
-2020-06-08 09:38:42,099 WARN  [Tools] Could not delete temporary directory C:\Users\MANOJK~1\AppData\Local\Temp\b0d41e69-868d-4e7f-ac92-f408ae078b20
-2020-06-08 09:38:42,101 WARN  [Tools] Could not delete temporary directory C:\Users\MANOJK~1\AppData\Local\Temp\733541ca-2f05-41b1-949a-700330d4a6ee
+	at com.eviware.soapui.plugins.PluginLoader.loadPlugin(PluginLoader.java:54)
+	at com.eviware.soapui.plugins.PluginManager.doInstallPlugin(PluginManager.java:141)
+	at com.eviware.soapui.plugins.PluginManager.access$600(PluginManager.java:43)
+	at com.eviware.soapui.plugins.PluginManager$LoadPluginsTask.computeSequentially(PluginManager.java:420)
+	at com.eviware.soapui.plugins.PluginManager$LoadPluginsTask.compute(PluginManager.java:377)
+	at com.eviware.soapui.plugins.PluginManager$LoadPluginsTask.compute(PluginManager.java:382)
+	at com.eviware.soapui.plugins.PluginManager$LoadPluginsTask.compute(PluginManager.java:365)
+	at java.util.concurrent.RecursiveTask.exec(RecursiveTask.java:94)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+2020-06-08 11:40:04,115 INFO  [PluginManager] Adding plugin from [C:\Users\ManojKumarJallaram\.soapuios\plugins\readyapi-swaggerhub-plugin-1.0.jar]
+2020-06-08 11:40:04,824 ERROR [SoapUI] An error occurred [com.eviware.soapui.plugins.auto.factories.AutoImportMethodFactory], see error log for details
+2020-06-08 11:40:04,825 ERROR [errorlog] java.lang.ClassNotFoundException: com.eviware.soapui.plugins.auto.factories.AutoImportMethodFactory
+java.lang.ClassNotFoundException: com.eviware.soapui.plugins.auto.factories.AutoImportMethodFactory
+	at org.codehaus.plexus.classworlds.strategy.SelfFirstStrategy.loadClass(SelfFirstStrategy.java:50)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.unsynchronizedLoadClass(ClassRealm.java:271)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(ClassRealm.java:247)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(ClassRealm.java:239)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at com.eviware.soapui.plugins.LoaderBase.loadAutoFactories(LoaderBase.java:113)
+	at com.eviware.soapui.plugins.LoaderBase.loadFactories(LoaderBase.java:80)
+	at com.eviware.soapui.plugins.PluginLoader.loadPluginFactories(PluginLoader.java:141)
+	at com.eviware.soapui.plugins.PluginLoader.loadPlugin(PluginLoader.java:104)
+	at com.eviware.soapui.plugins.PluginLoader.loadPlugin(PluginLoader.java:54)
+	at com.eviware.soapui.plugins.PluginManager.doInstallPlugin(PluginManager.java:141)
+	at com.eviware.soapui.plugins.PluginManager.access$600(PluginManager.java:43)
+	at com.eviware.soapui.plugins.PluginManager$LoadPluginsTask.computeSequentially(PluginManager.java:420)
+	at com.eviware.soapui.plugins.PluginManager$LoadPluginsTask.compute(PluginManager.java:377)
+	at com.eviware.soapui.plugins.PluginManager$LoadPluginsTask.compute(PluginManager.java:382)
+	at com.eviware.soapui.plugins.PluginManager$LoadPluginsTask.compute(PluginManager.java:365)
+	at java.util.concurrent.RecursiveTask.exec(RecursiveTask.java:94)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+2020-06-08 11:40:04,894 ERROR [SoapUI] An error occurred [com.eviware.soapui.plugins.auto.factories.AutoDiscoveryMethodFactory], see error log for details
+2020-06-08 11:40:04,895 ERROR [errorlog] java.lang.ClassNotFoundException: com.eviware.soapui.plugins.auto.factories.AutoDiscoveryMethodFactory
+java.lang.ClassNotFoundException: com.eviware.soapui.plugins.auto.factories.AutoDiscoveryMethodFactory
+	at org.codehaus.plexus.classworlds.strategy.SelfFirstStrategy.loadClass(SelfFirstStrategy.java:50)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.unsynchronizedLoadClass(ClassRealm.java:271)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(ClassRealm.java:247)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(ClassRealm.java:239)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at com.eviware.soapui.plugins.LoaderBase.loadAutoFactories(LoaderBase.java:113)
+	at com.eviware.soapui.plugins.LoaderBase.loadFactories(LoaderBase.java:80)
+	at com.eviware.soapui.plugins.PluginLoader.loadPluginFactories(PluginLoader.java:141)
+	at com.eviware.soapui.plugins.PluginLoader.loadPlugin(PluginLoader.java:104)
+	at com.eviware.soapui.plugins.PluginLoader.loadPlugin(PluginLoader.java:54)
+	at com.eviware.soapui.plugins.PluginManager.doInstallPlugin(PluginManager.java:141)
+	at com.eviware.soapui.plugins.PluginManager.access$600(PluginManager.java:43)
+	at com.eviware.soapui.plugins.PluginManager$LoadPluginsTask.computeSequentially(PluginManager.java:420)
+	at com.eviware.soapui.plugins.PluginManager$LoadPluginsTask.compute(PluginManager.java:377)
+	at com.eviware.soapui.plugins.PluginManager$LoadPluginsTask.compute(PluginManager.java:382)
+	at com.eviware.soapui.plugins.PluginManager$LoadPluginsTask.compute(PluginManager.java:365)
+	at java.util.concurrent.RecursiveTask.exec(RecursiveTask.java:94)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+2020-06-08 11:40:04,959 INFO  [PluginManager] 5 plugins loaded in 4128 ms
+2020-06-08 11:40:04,959 INFO  [DefaultSoapUICore] All plugins loaded
+2020-06-08 11:40:05,831 INFO  [WsdlProject] Loaded project from [file:/C:/Users/ManojKumarJallaram/Desktop/Project/my-app/calculator-soapui-project.xml]
+2020-06-08 11:40:05,837 INFO  [SoapUITestCaseRunner] Running SoapUI tests in project [calculator]
+2020-06-08 11:40:05,838 INFO  [SoapUITestCaseRunner] Running Project [calculator], runType = SEQUENTIAL
+2020-06-08 11:40:05,842 INFO  [SoapUITestCaseRunner] Project [calculator] finished with status [FINISHED] in 0ms
+2020-06-08 11:41:54,330 WARN  [Tools] Could not delete temporary directory C:\Users\MANOJK~1\AppData\Local\Temp\736f3f3f-d83b-4ae1-950d-2983be4c557b
+2020-06-08 11:41:54,337 WARN  [Tools] Could not delete temporary directory C:\Users\MANOJK~1\AppData\Local\Temp\1dedbefc-e172-4a24-9121-99b5289e997a
